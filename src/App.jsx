@@ -1,9 +1,18 @@
+import { BrowserRouter as Router } from 'react-router-dom';
+import RoutesBrowser from './routes/Routes';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import './App.css';
+
 function App() {
   return (
-    <div>
-      <h1>Cooking Safely 🧑‍🍳</h1>
-      <p>Frontend iniciado con React + Vite</p>
-    </div>
+    <Router>
+      <NavBar />
+      <main>
+        <RoutesBrowser />
+      </main>
+      <Footer />
+    </Router>
   );
 }
 
