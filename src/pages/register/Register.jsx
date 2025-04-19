@@ -29,7 +29,7 @@ function Register() {
       <div className="register-card">
         <h2>CREATE<br />your account</h2>
 
-        {success && <p className="success-msg">User registered successfully!</p>}
+        {success && !error && <p className="success-msg">User registered successfully!</p>}
         {error && <p className="error-msg">{error}</p>}
 
         <form className="register-form" onSubmit={handleSubmit}>

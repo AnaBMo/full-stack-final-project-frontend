@@ -1,0 +1,27 @@
+.home-welcome{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    
+}
+
+
+.home-logo{
+    width: 200px;
+    padding: 100px;
+}
+
+.home-text{
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+.home-text h1{
+    font-size: 100px;
+    font-family: epilogue;
+    color: #6CADB2;
+    
+    width:500px;
+    line-height: 1.15;
+}
