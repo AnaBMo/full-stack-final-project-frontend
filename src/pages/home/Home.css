@@ -6,7 +6,6 @@
     
 }
 
-
 .home-logo{
     width: 200px;
     padding: 100px;
@@ -18,10 +17,85 @@
 }
 
 .home-text h1{
-    font-size: 100px;
+    font-size: 70px;
     font-family: epilogue;
     color: #6CADB2;
-    
     width:500px;
     line-height: 1.15;
+}
+
+.home-cards{
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  align-items: center;
+  justify-content: center; 
+  gap: 5px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .home-welcome {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      
+    }
+  
+    .home-logo {
+      width: 200px;
+      height: 100px;
+      padding: 20px;
+    }
+  
+    .home-text {
+      margin: 0;
+      padding: 20px;
+    }
+  
+    .home-text h1 {
+      font-size: 40px;
+      width: auto;
+      line-height: 1.2;
+      padding: 10px 20px 30px;
+    }  
+
+    .home-cards{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+}  
+
+@media (max-width: 430px) {
+  .home-logo {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 768px) {
+  .home-logo {
+    width: 150px;
+    height: 100px;
+    padding: 20px 40px 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .home-text h1 {
+    font-size: 60px;
+    width: auto;
+    line-height: 1.2;
+    padding: 10px 20px 30px;
+  } 
+
+  .home-logo {
+    width: 170px;
+    height: 130px;
+    padding: 20px 40px 40px;
+  }
 }

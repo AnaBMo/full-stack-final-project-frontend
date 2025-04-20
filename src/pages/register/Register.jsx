@@ -1,23 +1,24 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { registerUser } from "../../firebase/auth";
 import './Register.css';
 
 function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
   const [accepted, setAccepted] = useState(false);
 
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await registerUser(email, password);
-      setSuccess(true);
-      setError('');
       setEmail('');
       setPassword('');
+      setError('');
+      navigate("/login"); 
     } catch (err) {
       console.error(err.message);
       setError('Registration failed. Please try again.');
@@ -27,9 +28,8 @@ function Register() {
   return (
     <div className="register-page">
       <div className="register-card">
-        <h2>CREATE<br />your account</h2>
+        <h2>CREATE your <br />account</h2>
 
-        {success && !error && <p className="success-msg">User registered successfully!</p>}
         {error && <p className="error-msg">{error}</p>}
 
         <form className="register-form" onSubmit={handleSubmit}>

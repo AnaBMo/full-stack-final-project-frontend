@@ -1,14 +1,22 @@
 .home-card {
-    flex: 1 1 220px;
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px; 
+    background-color: #EFEFEF;
+    border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    text-align: center;
     text-decoration: none;
     color: #333;
     transition: transform 0.2s ease;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden; 
 }
+
   
 .home-card:hover {
     transform: translateY(-5px);
@@ -19,4 +27,7 @@
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
-  
+
+.home-card h3{
+    padding: 5px;
+}

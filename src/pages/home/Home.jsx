@@ -12,7 +12,10 @@ function Home() {
       <div className="home-container">
         <div className="home-welcome">
             <div className="home-text">
-                <h1>Sustainability Security Control Optimization</h1>
+                <h1>Sustainability <br />
+                Security <br />
+                Control <br />
+                Optimization</h1>
             </div>
 
             <div className='home-logo'>
