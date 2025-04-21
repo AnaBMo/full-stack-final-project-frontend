@@ -16,17 +16,17 @@ const HomeCardData = [
     {
       title: 'Regulations',
       description: 'Documentation control',
-      to: '/soon',
+      to: '/under-construction',
     },
     {
       title: 'Training',
       description: 'Access to food safety courses',
-      to: '/soon',
+      to: '/under-construction',
     },
     {
         title: 'Sustainability',
         description: 'Handle issues related to sustainability',
-        to: '/soon',
+        to: '/under-construction',
       },
 ];
   
