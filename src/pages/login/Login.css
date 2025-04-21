@@ -2,8 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem 2rem;
-    min-height: calc(100vh - 140px); /* nav + footer */
+    min-height: calc(100vh - 140px); 
     background-color: #f7f7f7;
     font-family: epilogue;
 }
