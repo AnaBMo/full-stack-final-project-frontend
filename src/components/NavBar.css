@@ -64,8 +64,15 @@
     font-size: 2rem;
     color: white;
     cursor: pointer;
-    margin: 10px;
+    margin: 0;
     text-align: right; 
+    padding: 0;
+}
+
+.navbar-toggle:hover {
+    background-color: transparent; 
+    transition: all 0.3s;
+    scale: 1.1;
 }
 
 

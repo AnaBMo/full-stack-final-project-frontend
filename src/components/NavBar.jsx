@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import './NavBar.css';
 import logo from '../assets/logo.png';
+import { FaUser } from "react-icons/fa";
 
 
 function NavBar() {
@@ -13,9 +14,9 @@ function NavBar() {
         {/*se usa el hook useLocation para poner el logo la barra
         de navegación de todas las páginas que no sean Home*/}
         {!isHome && (
-          <div className="navbar-logo">
-            <img src={logo} alt="Cooking Safely Logo" />
-          </div>
+            <Link to="/" className="navbar-logo">
+              <img src={logo} alt="Cooking Safely Logo" />
+            </Link>
         )}
 
         <nav className="navbar-links">
@@ -25,8 +26,7 @@ function NavBar() {
           <Link to="/under-construction">Regulations</Link>
           <Link to="/under-construction">Training</Link>
           <Link to="/under-construction">Sustainability</Link>
-          <Link to="/register">Register</Link>
-          <Link to="/login">Login</Link>
+          <Link to="/login" className="navbar-link"><FaUser style={{ marginRight: "0.5rem" }} /> Login</Link>
         </nav>
 
         <button className="navbar-toggle">&#9776;</button>

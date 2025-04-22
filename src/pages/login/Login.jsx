@@ -47,6 +47,10 @@ function Login() {
           />
 
           <button type="submit">Log in</button>
+
+          <div className="login-register-link">
+              Don’t have an account? <a href="/register">Create an account</a>
+          </div>
         </form>
       </div>
     </div>

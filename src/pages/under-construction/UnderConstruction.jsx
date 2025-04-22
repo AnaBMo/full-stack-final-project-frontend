@@ -8,6 +8,7 @@ function UnderConstruction() {
                     <img src={UnderConsttructionImg} alt="Industrial kitchen" />
                     <div className="under-text">
                         <h2>UNDER</h2>
+                        <h1 className="h1-responsive">CONSTRUCTION</h1>
                         <p>Something very interesting is cooking... <br />
                         The recipe includes more options for managing your business.</p>               
                 </div>

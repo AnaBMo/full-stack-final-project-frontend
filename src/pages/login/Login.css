@@ -69,6 +69,24 @@ button:hover {
     align-items: center;
 }
 
+.login-register-link {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+  
+.login-register-link a {
+    color: #FF7E7E;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 0.25rem;
+}
+  
+.login-register-link a:hover {
+    text-decoration: underline;
+}  
+
 /* MEDIA QUERIES */ 
 @media (max-width: 768px) {
     .login-card h2 {
