@@ -9,6 +9,11 @@ h1{
 }
 
 /* botones */
+button {
+    margin: 7px;
+    width: 280px;
+    height: 50px;
+}
 .products-btns {
     display: flex;
     flex-direction: row;
@@ -17,7 +22,8 @@ h1{
     margin-bottom: 20px;
 }
 
-.products-btns button{
+.products-btns button
+.link-to-form {
     margin: 10px;
     font-size: 18px;
 }
@@ -76,7 +82,8 @@ h1{
         
     }
 
-    .products-btns button{
+    .products-btns button
+    .link-to-form {
         margin: 10px;
         font-size: 15px;
         width: 50%;

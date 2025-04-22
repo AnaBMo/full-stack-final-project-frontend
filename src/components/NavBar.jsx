@@ -7,6 +7,8 @@ import { FaUser } from "react-icons/fa";
 function NavBar() {
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const isProducts = location.pathname === "/products";
+  const isRecipes = location.pathname === "/recipes";
 
   return (
     <>
@@ -20,9 +22,9 @@ function NavBar() {
         )}
 
         <nav className="navbar-links">
-          <Link to="/">Home</Link>
-          <Link to="/products">Products</Link>
-          <Link to="/recipes">Recipes</Link>
+          {!isHome && <Link to="/">Home</Link>}
+          {!isProducts && <Link to="/products">Products</Link>}
+          {!isRecipes && <Link to="/recipes">Recipes</Link>}
           <Link to="/under-construction">Regulations</Link>
           <Link to="/under-construction">Training</Link>
           <Link to="/under-construction">Sustainability</Link>

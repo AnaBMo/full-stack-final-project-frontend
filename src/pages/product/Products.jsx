@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Products.css";
 
@@ -37,7 +38,9 @@ function Products() {
         <div className="products-container">
             <h1>Products</h1>
             <div className="products-btns">
-                <button>New Product</button>
+                <Link className="link-to-form" to="/products/new">
+                  <button>New Product</button>
+                </Link>
                 <button onClick={expiringSoon}>Expiring Soon</button>
                 <button onClick={expired}>Expired</button>
                 <button onClick={allProducts}>All products</button>
