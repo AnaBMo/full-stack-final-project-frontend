@@ -53,7 +53,6 @@ function NewRecipe() {
         e.preventDefault();
         console.log("Form submitted", formData);
         try {
-            console.log("🟡 Token being sent:", token);
             await axios.post(`${import.meta.env.VITE_API_URL}/recipes`, {
                 ...formData, createdBy: user.uid
             }, {
