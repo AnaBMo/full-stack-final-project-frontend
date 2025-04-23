@@ -6,6 +6,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import "./NewRecipe.css";
 
 function NewRecipe() {
+
     const { user, token } = useContext(AuthContext);
     const navigate = useNavigate();
 
@@ -54,7 +55,9 @@ function NewRecipe() {
         console.log("Form submitted", formData);
         try {
             await axios.post(`${import.meta.env.VITE_API_URL}/recipes`, {
-                ...formData, createdBy: user.uid
+                ...formData, 
+                createdBy: user.uid,
+                createdByEmail: user.email,
             }, {
                 headers: { Authorization: `Bearer ${token}` }
             });

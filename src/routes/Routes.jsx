@@ -9,6 +9,7 @@ import NewProduct from "../pages/product/NewProduct";
 import ProductDetail from '../pages/product/ProductDetail';
 import NewRecipe from '../pages/recipe/NewRecipe';
 import Recipes from '../pages/recipe/Recipes'
+import RecipeDetail from '../pages/recipe/RecipeDetail';
 
 function RoutesBrowser() {
   return (
@@ -24,6 +25,7 @@ function RoutesBrowser() {
           <Route path="/products/:productId" element={<ProductDetail />} />
           <Route path="/recipes/new" element={<NewRecipe />} />
           <Route path="/recipes" element={<Recipes />} />
+          <Route path="/recipes/:recipeId" element={<RecipeDetail />} />
         </Routes>
     </>
   );
