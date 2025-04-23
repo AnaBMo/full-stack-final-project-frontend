@@ -5,6 +5,7 @@ import Login from '../pages/login/Login';
 import UnderConstruction from '../pages/under-construction/UnderConstruction';
 import Products from "../pages/product/Products";
 import NewProduct from "../pages/product/NewProduct";
+import ProductDetail from '../pages/product/ProductDetail';
 
 function RoutesBrowser() {
   return (
@@ -16,6 +17,7 @@ function RoutesBrowser() {
           <Route path="/under-construction" element={<UnderConstruction />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/new" element={<NewProduct />} />
+          <Route path="/products/:productId" element={<ProductDetail />} />
         </Routes>
     </>
   );
