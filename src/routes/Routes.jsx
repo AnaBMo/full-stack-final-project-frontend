@@ -6,6 +6,7 @@ import UnderConstruction from '../pages/under-construction/UnderConstruction';
 import Products from "../pages/product/Products";
 import NewProduct from "../pages/product/NewProduct";
 import ProductDetail from '../pages/product/ProductDetail';
+import NewRecipe from '../pages/recipe/NewRecipe';
 
 function RoutesBrowser() {
   return (
@@ -18,6 +19,7 @@ function RoutesBrowser() {
           <Route path="/products" element={<Products />} />
           <Route path="/products/new" element={<NewProduct />} />
           <Route path="/products/:productId" element={<ProductDetail />} />
+          <Route path="/recipes/new" element={<NewRecipe />} />
         </Routes>
     </>
   );
