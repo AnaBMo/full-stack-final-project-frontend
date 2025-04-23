@@ -1,18 +1,22 @@
 import { useState } from "react";
 import { loginUser } from "../../firebase/auth"; 
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
+
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await loginUser(email, password);
       setSuccess(true);
+      navigate("/");
       setError("");
     } catch (err) {
       console.error(err.message);

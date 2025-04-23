@@ -58,3 +58,9 @@ img {
   height: auto;
   display: block;
 }
+
+.success-msg {
+  color: rgb(107, 204, 107);
+  text-align: center;
+  margin:0;
+} 

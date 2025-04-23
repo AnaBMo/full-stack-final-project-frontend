@@ -78,9 +78,9 @@ function NewRecipe() {
                     <div className="ingredients-container">
                     <label>Ingredients</label>
                     <select onChange={handleIngredientSelect}>
-                        <option value="">Select an ingredient</option>
+                        <option className="option" value="">Select an ingredient</option>
                         {products.map(product => (
-                            <option key={product._id} value={product._id}>
+                            <option className="option" key={product._id} value={product._id}>
                                 {product.name} - {new Date(product.expirationDate).toLocaleDateString()}
                             </option>
                         ))}

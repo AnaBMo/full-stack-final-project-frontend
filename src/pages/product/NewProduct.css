@@ -39,7 +39,8 @@
 }
   
 .new-product-form input,
-.new-product-form textarea {
+.new-product-form textarea,
+.ingredients-container select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -47,17 +48,29 @@
     font-family: inherit;
     background-color: #f9f9f9;
 }
+
+/*
+.option{
+    color: red;
+}
+*/ 
+
+.select:not(:-internal-list-box):not([multiple]){
+    color: red;
+}
   
 .new-product-form button {
     margin-top: 20px;
     font-size: 18px;
 }
 
+/*
 .success-msg {
     color: rgb(107, 204, 107);
     text-align: center;
     margin:0;
 } 
+*/
 
 @media (max-width: 678px) {
 
@@ -71,10 +84,8 @@
         border-bottom: 7px solid #6CADB2;
     }
 
-    .new-product-page h2 {
-      font-size: 50px;
-      margin: 0;
-      padding-left: 20px;
+    .title-wrapper h2 {
+        font-size: 80px;   
     }
 
     .title-wrapper{
@@ -88,4 +99,11 @@
         text-align: center;
         margin:0;
     } 
+}  
+
+@media (max-width: 430px) {
+    .title-wrapper h2 {
+        font-size: 50px;
+        
+    }
 }  
