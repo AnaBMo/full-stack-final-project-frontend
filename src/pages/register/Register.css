@@ -97,6 +97,11 @@ button:hover {
       font-size: 0.875rem; 
       width: 150px;
     }
+
+    .register-card{
+        width: 70%;
+    }
+
     .register-card h2{
        text-align: center; 
     }

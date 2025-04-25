@@ -89,6 +89,10 @@ button:hover {
 
 /* MEDIA QUERIES */ 
 @media (max-width: 768px) {
+    .login-card{
+        width: 70%;
+    }
+    
     .login-card h2 {
         text-align: center; 
     }

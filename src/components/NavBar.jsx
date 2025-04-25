@@ -2,9 +2,8 @@ import { Link, useLocation } from 'react-router-dom';
 import './NavBar.css';
 import logo from '../assets/logo.png';
 import { FaUser } from "react-icons/fa";
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../context/AuthContext';
-
 
 
 function NavBar() {
@@ -13,6 +12,13 @@ function NavBar() {
   const isProducts = location.pathname === "/products";
   const isRecipes = location.pathname === "/recipes";
   const { user } = useContext(AuthContext);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(prev => !prev);
+  };
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
@@ -25,24 +31,24 @@ function NavBar() {
           </Link>
         )}
 
-        <nav className="navbar-links">
-          {!isHome && <Link to="/">Home</Link>}
-          {!isProducts && <Link to="/products">Products</Link>}
-          {!isRecipes && <Link to="/recipes">Recipes</Link>}
-          <Link to="/under-construction">Regulations</Link>
-          <Link to="/under-construction">Training</Link>
-          <Link to="/under-construction">Sustainability</Link>
+        <nav className={`navbar-links ${menuOpen ? "open" : ""}`}>
+          {!isHome && <Link to="/" onClick={closeMenu}>Home</Link>}
+          {!isProducts && <Link to="/products" onClick={closeMenu}>Products</Link>}
+          {!isRecipes && <Link to="/recipes" onClick={closeMenu}>Recipes</Link>}
+          <Link to="/under-construction" onClick={closeMenu}>Regulations</Link>
+          <Link to="/under-construction" onClick={closeMenu}>Training</Link>
+          <Link to="/under-construction" onClick={closeMenu}>Sustainability</Link>
           {!user && (
-            <Link to="/login" className="navbar-link">
+            <Link to="/login" className="navbar-link" onClick={closeMenu}>
               <FaUser style={{ marginRight: "0.5rem" }} /> Login
             </Link>
           )}
           {user && (
-            <Link to="/logout">Logout</Link>
+            <Link to="/logout" onClick={closeMenu}>Logout</Link>
           )}
         </nav>
 
-        <button className="navbar-toggle">&#9776;</button>
+        <button className="navbar-toggle" onClick={toggleMenu}>&#9776;</button>
       </header>
     </>
   );

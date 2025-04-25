@@ -5,6 +5,8 @@ import "./RecipeDetail.css";
 import { AuthContext } from "../../context/AuthContext";
 import RecipeViewImg from "../../assets/recipe-view.png";
 import { FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 function RecipeDetail() {
   const { token } = useContext(AuthContext);
@@ -16,8 +18,8 @@ function RecipeDetail() {
     axios.get(`${import.meta.env.VITE_API_URL}/recipes/${recipeId}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
-    .then(res => setRecipe(res.data))
-    .catch(err => console.error("Error fetching recipe:", err));
+      .then(res => setRecipe(res.data))
+      .catch(err => console.error("Error fetching recipe:", err));
   };
 
   useEffect(() => {
@@ -36,9 +38,18 @@ function RecipeDetail() {
           <p><strong>Preparation date:</strong> {new Date(recipe.preparationDate).toLocaleDateString()}</p>
           <p><strong>Expiration date:</strong> {new Date(recipe.expirationDate).toLocaleDateString()}</p>
           <p><strong>Ingredients:</strong></p>
+          <span className="can-click">You can click on the ingredient to see the product in detail.</span>
           <ul>
             {recipe.ingredients.map((ingredient, index) => (
-              <li key={index}>{ingredient.product?.name || "Unknown product"}</li>
+              <li key={index}>
+                {ingredient.product?._id ? (
+                  <Link to={`/products/${ingredient.product._id}`} state={{ from: "recipe" }}>
+                    {ingredient.product.name}
+                  </Link>
+                ) : (
+                  "Unknown product"
+                )}
+              </li>
             ))}
           </ul>
           <p><strong>Created by:</strong> {recipe.createdByEmail}</p>

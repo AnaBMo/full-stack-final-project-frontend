@@ -31,6 +31,7 @@
     flex-direction: column;
     justify-content: center;
     max-width: 400px;
+    
 }
 
 .product-detail-info p {
@@ -72,4 +73,12 @@
 
 .back-button:hover {
     opacity: 0.8;
+}
+
+.cancel-btn {
+    background-color: #424646;
+    width: 200px;
+    margin: 7px 7px 7px 50px;
+    padding: 12px, 24px;
+    font-size: 22px;
 }

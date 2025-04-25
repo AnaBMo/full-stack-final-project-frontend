@@ -31,12 +31,20 @@
     flex-direction: column;
     justify-content: center;
     max-width: 400px;
+    margin-top: 10px;
 }
 
 .recipe-detail-info p {
-    margin: 12px;
+    margin: 7px 12px;
     font-size: 18px;
     color: #424646;
+}
+
+.can-click{
+    color: #FF7E7E;
+    margin: 0px 12px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .recipe-detail-info ul {

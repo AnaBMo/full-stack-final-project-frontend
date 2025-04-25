@@ -6,25 +6,6 @@
     border-bottom: 7px solid #6CADB2;
 }
 
-.title-wrapper{
-    width: 40%;
-    border-right: 3px solid #6CADB2;
-    margin-top: 20px;
-    margin-left: 50px;
-}
-
-.title-wrapper h2 {
-    font-size: 140px;
-    color: #6CADB2;
-    text-align: left;
-    margin-right: 50px;
-}
-
-.form-wrapper{
-    margin-top: 20px;
-    margin-left: 50px;
-}
-  
 .new-recipe-form {
     display: flex;
     flex-direction: column;
@@ -52,12 +33,6 @@
     margin-top: 20px;
     font-size: 18px;
 }
-
-.success-msg {
-    color: rgb(107, 204, 107);
-    text-align: center;
-    margin:0;
-} 
 
 .ingredients-container{
     display: flex;
@@ -93,9 +68,7 @@
     color:  #424646;
 }
 
-
 @media (max-width: 678px) {
-
     .new-recipe-page {
         display: flex;
         flex-direction: column;
@@ -111,16 +84,4 @@
       margin: 0;
       padding-left: 20px;
     }
-
-    .title-wrapper{
-        width: 60%;
-        margin-top: 20px;   
-        border-right: none;
-    }
-
-    .success-msg {
-        color: rgb(107, 204, 107);
-        text-align: center;
-        margin:0;
-    } 
 }  
