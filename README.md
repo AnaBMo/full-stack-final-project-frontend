@@ -1,12 +1,73 @@
-# React + Vite
+# 🍳 Cooking Safely – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto forma parte del sistema "Cooking Safely", diseñado para gestionar productos alimentarios y registrar recetas elaboradas, con trazabilidad, autenticación de usuarios y control de stock.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- **React + Vite**
+- **React Router DOM** para la navegación
+- **Axios** para peticiones HTTP
+- **Firebase Authentication** para login y registro de usuarios
+- **Context API** para la gestión del estado global de autenticación
+- **Vercel** para el despliegue del frontend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🔐 Autenticación
+
+- Autenticación de usuarios implementada con Firebase.
+- Sistema de **login**, **registro** y **logout**.
+- Rutas protegidas: Solo los usuarios autenticados pueden crear recetas.
+- Redirección automática si el usuario no está autenticado.
+
+---
+
+## 📚 Rutas principales (Navegación)
+
+| URL | Página | Descripción |
+|:---|:---|:---|
+| `/` | Home | Página principal de bienvenida |
+| `/register` | Registro | Formulario de registro de usuario |
+| `/login` | Login | Inicio de sesión de usuario |
+| `/logout` | Logout | Cierre de sesión |
+| `/products` | Productos | Listado de productos almacenados |
+| `/products/new` | Nuevo producto | Formulario para crear un nuevo producto |
+| `/products/:productId` | Detalle producto | Vista individual del producto seleccionado |
+| `/recipes` | Recetas | Listado de recetas |
+| `/recipes/new` | Nueva receta | Formulario para registrar una receta |
+| `/recipes/:recipeId` | Detalle receta | Vista individual de una receta creada |
+| `/under-construction` | En construcción | Página para secciones futuras |
+
+---
+
+## ✨ Funcionalidades destacadas
+
+- **Listado de productos** y filtro por fecha de caducidad.
+- **Creación de productos** (solo usuarios autenticados).
+- **Visualización y borrado** de productos individuales.
+- **Listado de recetas** y filtro por fecha de preparación.
+- **Creación de recetas** seleccionando productos como ingredientes.
+- **Visualización de recetas** con ingredientes y creador.
+- **Sistema de login/logout** y control de navegación según estado de sesión.
+- **Menú hamburguesa** responsive en dispositivos móviles.
+
+---
+
+## 🚀 Despliegue
+
+- Backend desplegado en **Render**.
+- Frontend desplegado en **Vercel**.
+- Variables de entorno (.env) configuradas con las URL de los servicios.
+
+---
+
+## 🔪 Tests
+
+- Pruebas manuales en navegador.
+- Control de errores con mensajes amigables en formulario de login, creación de producto y creación de receta.
+
+Próximos pasos: Automatización de tests de navegación y autenticación con herramientas como **Cypress**.
+
+---
