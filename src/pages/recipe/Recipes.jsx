@@ -82,7 +82,7 @@ function Recipes() {
             </Link>
           ))
         ) : (
-          <h4>Remember! You must log in to access the recipes.</h4>
+          <p>No recipes created yet.</p>
         )}
       </div>
     </div>
