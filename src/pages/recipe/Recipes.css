@@ -41,6 +41,10 @@ button {
     margin: 16px 0px;
 }
 
+h4{
+    color: #424646;
+    font-weight: bolder;
+}
 
 /* listado */
 .recipe-list {
