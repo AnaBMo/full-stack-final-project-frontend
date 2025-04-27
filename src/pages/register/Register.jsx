@@ -43,7 +43,7 @@ function Register() {
 
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Password (>6 characters)"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
