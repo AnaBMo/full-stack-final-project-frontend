@@ -41,6 +41,12 @@ button {
     margin: 16px 0px;
 }
 
+/* Mensaje Login */
+h4{
+    color: #424646;
+    font-weight: bolder;
+}
+
 /* listado */
 .recipe-list {
     display: flex;
