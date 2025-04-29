@@ -11,7 +11,7 @@ Este proyecto forma parte del sistema "Cooking Safely", diseñado para gestionar
 - **Axios** para peticiones HTTP
 - **Firebase Authentication** para login y registro de usuarios
 - **Context API** para la gestión del estado global de autenticación
-- **Vercel** para el despliegue del frontend
+- **Render** para el despliegue del frontend: https://full-stack-final-project-cooking-safety.onrender.com
 
 ---
 
