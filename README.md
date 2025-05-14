@@ -12,6 +12,7 @@ Este proyecto forma parte del sistema "Cooking Safely", diseñado para gestionar
 - **Firebase Authentication** para login y registro de usuarios
 - **Context API** para la gestión del estado global de autenticación
 - **Render** para el despliegue del frontend: https://full-stack-final-project-cooking-safety.onrender.com
+- - **Figma** para el diseño.
 
 ---
 
@@ -52,14 +53,6 @@ Este proyecto forma parte del sistema "Cooking Safely", diseñado para gestionar
 - **Visualización de recetas** con ingredientes y creador.
 - **Sistema de login/logout** y control de navegación según estado de sesión.
 - **Menú hamburguesa** responsive en dispositivos móviles.
-
----
-
-## 🚀 Despliegue
-
-- Backend desplegado en **Render**.
-- Frontend desplegado en **Vercel**.
-- Variables de entorno (.env) configuradas con las URL de los servicios.
 
 ---
 
