@@ -12,7 +12,7 @@ Este proyecto forma parte del sistema "Cooking Safely", diseñado para gestionar
 - **Firebase Authentication** para login y registro de usuarios
 - **Context API** para la gestión del estado global de autenticación
 - **Render** para el despliegue del frontend: https://full-stack-final-project-cooking-safety.onrender.com
-- - **Figma** para el diseño.
+- **Figma** para el diseño.
 
 ---
 
